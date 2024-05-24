@@ -1,42 +1,40 @@
-const qntDeSeguidores = document.querySelector('.follow');
-const qntDeview = document.querySelector('.view');
-const qntDeAcesso = document.querySelector('.Acessos');
-const qntDeAlcance = document.querySelector('.alcance');
+let qntDeSeguidores = document.querySelector('.follow');
+let qntDeview = document.querySelector('.view');
+let qntDeAcesso = document.querySelector('.Acessos');
+let qntDeAlcance = document.querySelector('.alcance');
+let result = document.querySelector('#result');
+let mensagem = document.querySelector('#mensagem');
 
 
-const result = document.querySelector('#result');
+result.addEventListener('click', function() {
 
+    let follow = parseInt( qntDeSeguidores.value.trim());
+    let view = parseInt( qntDeview.value.trim());
+    mensagem.innerHTML = '';
 
-result.addEventListener('click' function()){
+    if (isNaN(follow) || isNaN(view) || view === 0) {
 
-    const qntDeSeguidores = parseInt('follow'.value);
-    const qntDeview = parseInt('view'.value);
-    const mensagem = document.querySelector('#mensagem');
-     
-    const result = (qntDeSeguidores / qntDeview) * 100;
-    
-    if(result >= 10 ){
-        const mensagem = document.createElement('p');
-        
-        result = document.textContent = 'parabens voçe está no caminho certo, continue!'
-        mensagem.style.fontSize = '2rem'
-        mensagem.style.color = "#DA2D11"
-        mensagem.append(mensagem);
-
-    }else if( result <= 0.07 && result >= 0.04){
-        result = document.textContent = 'otimo, tente uma maior interaçao com seus seguidores e aumente seus resultado!'
-        mensagem.style.fontSize = '2rem'
-        mensagem.style.color = "#0162F8"
-        mensagem.append(mensagem);
-        
-    }else{
-        result= document.textContent = "acho que estar na hora de mudar a estategia e tentar algo novo!"
-        mensagem.style.fontSize = '2rem'
-        mensagem.style.color = "#212121"
-        mensagem.append(mensagem);
-
+        mensagem.textContent ='Por favor, insira valores válidos.';
+        return;
     }
 
+    let resultbtn = (follow / view ) * 100;
+    let paragraf = document.createElement('p');
 
+    if(resultbtn >= 10){
+        mensagem.textContent = 'parabens voçe está no caminho certo, continue!'
+        console.log(resultbtn)
+    }
+    else if(resultbtn >= 5 && resultbtn <= 8.99){
+        mensagem.textContent = 'otimo, tente uma maior interaçao com seus seguidores e aumente seus resultado!'
+        mensagem.style.fontSize = '2rem'
+        mensagem.style.color = "#0162F8"
+    }else{
+        mensagem.textContent = "acho que estar na hora de mudar a estategia e tentar algo novo!"
+        mensagem.style.fontSize = '2rem'
+        mensagem.style.color = "#212121"
+    }
 
-}
+    mensagem.appendChild(paragraf);
+
+})

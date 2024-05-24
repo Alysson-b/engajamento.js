@@ -27,7 +27,7 @@ h1{
 .box1{
     margin-top: 3rem;
     width: 600px;
-    height: 380px;
+    height: 420px;
     border: solid 1px black;
     border-radius: 20px;
     background-color:  white;
@@ -89,7 +89,7 @@ h1{
 .box2{
     margin-top: 3rem;
     width: 600px;
-    height: 370px;
+    height: 440px;
     border: solid 1px black;
     border-radius: 20px;
     background-color:  white;
@@ -127,4 +127,11 @@ h1{
     margin-top: 0.7rem;
     font-size: 25px;
     margin-left: 15px;
+}
+
+#mensagem{
+    margin-top: 8px;
+    font-size: 2rem;
+    color: #DA2D11;
+    padding-left: 20px;
 }
