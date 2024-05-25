@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(236, 209, 172, 0.479);
+    background: linear-gradient(to right, #FF1493, #C71585, #FF8C00);
     margin-bottom: 8rem;
 }
 
@@ -23,11 +23,16 @@ h1{
     margin-top: 5rem;
     font-family: "Roboto" , sans-serif;
 }
+.img{
+    margin-top: 8px;
+    width: 70px;
+
+}
 
 .box1{
     margin-top: 3rem;
     width: 600px;
-    height: 420px;
+    height: 400px;
     border: solid 1px black;
     border-radius: 20px;
     background-color:  white;
@@ -86,10 +91,26 @@ h1{
     font-style: italic;
 }
 
+.btn{
+    text-align: start;
+    cursor: pointer;
+    color: #fffbfb;
+    font-size: 18px;
+    margin: 30px 17px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #0b6ef0c9;
+    box-shadow: 5px 5px;
+    text-shadow: 1px 1px 2px black;
+    font-family: "Poppins" , sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
 .box2{
     margin-top: 3rem;
     width: 600px;
-    height: 440px;
+    height: 400px;
     border: solid 1px black;
     border-radius: 20px;
     background-color:  white;
@@ -129,9 +150,14 @@ h1{
     margin-left: 15px;
 }
 
-#mensagem{
+#mensagem, .mensagem{
+    font-family: "poppins" , sans-serif;
+    font-weight: 500;
+    font-style: italic;
     margin-top: 8px;
-    font-size: 2rem;
-    color: #DA2D11;
+    font-size: 1.8rem;
     padding-left: 20px;
 }
+
+
+
